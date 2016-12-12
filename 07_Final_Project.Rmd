@@ -129,7 +129,7 @@ require(gridExtra)
 
 ```
 
-# Covariates and Trump margin - Romney margin; Note that aside from education, not many variables are correlated with the increase in GOP margin. 
+# Covariates and Trump margin - Romney margin; 
 
 ```{r}
 
