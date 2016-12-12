@@ -12,24 +12,14 @@ Python, version 3.5, Anaconda
 # Files 
 
 
-# Data
+## Data
 
 
-# Code
+## Code
 
 
-# Results
+## Results
 
 
-
-
-
-Collect socio-economic variables of each county using US Census API.
-(Amecican Community Servey 5 years data; 2010, 2014)
-
-Create some varaibles from these raw data
-(e.g. Ratio of hispanic from hispanic population/ total population, Population increase by (Pop2014-Pop2010)/Pop2010 ) etc)
-
-Import electoral count data from 
 
 
