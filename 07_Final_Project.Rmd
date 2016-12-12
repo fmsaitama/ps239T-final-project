@@ -327,7 +327,10 @@ lm3 <- lm(margingrowth~pop_growth+income_growth+
             univ_r+hisp_r+black_r+unemp_r+active_r+elder+youth+manufacture_r+agriculture_r+MedianIncome+MedianAge+homeowner_r+Foodstamp,
           data=total2)
 summary(lm3)
+```
+# Using stargazer package, visualize the regression table
 
+```{r}
 
 stargazer(lm0, lm1, lm2, lm3, type = "text", title="Regression Results")
 ```
