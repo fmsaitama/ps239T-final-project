@@ -1,0 +1,47 @@
+---
+title: "Census modification"
+author: '26966767'
+date: "12/11/2016"
+output: html_document
+---
+
+# Read and clean the Census data
+
+```{r}
+# Read the census data into R
+census <- read.csv('~/Desktop/PS239T/07_APIs/census2014.csv')
+
+# See summary
+summary(census)
+
+# Create some bew variables 
+census$homegrown <- census$BornInState/census$Population
+census$same_house <- census$SameHouse/census$Population
+
+  # Recent move in and move out; aggreagete them and devide by population
+census$move_in<- (census$FromOtherState+census$FromOtherCounty) /census$Population
+census$move_out <- (census$ToOtherState+census$ToOtherCounty) /census$Population
+
+  # The following variables had NAs and thus it was easier to merge in R rather than in Python
+census$youth <- census$X18to24/census$Population
+census$elder <- census$X65to74/census$Population
+
+```
+
+# Do the same for 2010 data
+
+```{r}
+
+
+census2010 <- read.csv('~/Desktop/PS239T/07_APIs/census2010.csv')
+
+summary(census2010)
+
+census2010$homegrown10 <- census2010$BornInState10/census2010$Population10
+census2010$same_house10 <- census2010$SameHouse/census2010$Population10
+census2010$move_in10<- (census2010$FromOtherState10+census2010$FromOtherCounty10) /census2010$Population10
+census2010$move_out10 <- (census2010$ToOtherState10+census2010$ToOtherCounty10) /census2010$Population10
+census2010$youth10 <- census2010$X18to24_10/census2010$Population10
+census2010$elder10 <- census2010$X65to74_10/census2010$Population10
+
+```
